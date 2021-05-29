@@ -563,24 +563,24 @@ def start():
 
 start()
 
-arch_hits_dealt,arch_hits_received,arch_cas,arch_nb,arch_CS = 0,0,0,0,0
-SF_hits_dealt,SF_hits_received,SF_cas,SF_nb,SF_CS = 0,0,0,0,0
-for unit,_ in list_units_leaders:
-    l,r,size_str,typ,formation,CS_str = basic_data(unit)
-    size = int(size_str)
-    CS = int(CS_str)
-    if typ == "Arch":
-        arch_hits_dealt += hits(unit)[0]
-        arch_hits_received += hits(unit)[1]
-        arch_nb += size
-        arch_CS += CS
-        arch_cas += casualties_caused_by(unit)
-    elif typ == "SF":
-        SF_hits_dealt += hits(unit)[0]
-        SF_hits_received += hits(unit)[1]
-        SF_nb += size
-        SF_CS += CS
-        SF_cas += casualties_caused_by(unit)
-
-arch_CS_per_s,SF_CS_per_s = arch_CS/arch_nb,SF_CS/SF_nb
-arch_hits_per_CS,SF_hits_per_CS = arch_hits_dealt/arch_CS,SF_hits_dealt/SF_CS
+#arch_hits_dealt,arch_hits_received,arch_cas,arch_nb,arch_CS = 0,0,0,0,0
+#SF_hits_dealt,SF_hits_received,SF_cas,SF_nb,SF_CS = 0,0,0,0,0
+#for unit,_ in list_units_leaders:
+#    l,r,size_str,typ,formation,CS_str = basic_data(unit)
+#    size = int(size_str)
+#    CS = int(CS_str)
+#    if typ == "Arch":
+#        arch_hits_dealt += hits(unit)[0]
+#        arch_hits_received += hits(unit)[1]
+#        arch_nb += size
+#        arch_CS += CS
+#        arch_cas += casualties_caused_by(unit)
+#    elif typ == "SF":
+#        SF_hits_dealt += hits(unit)[0]
+#        SF_hits_received += hits(unit)[1]
+#        SF_nb += size
+#        SF_CS += CS
+#        SF_cas += casualties_caused_by(unit)
+#
+#arch_CS_per_s,SF_CS_per_s = arch_CS/arch_nb,SF_CS/SF_nb
+#arch_hits_per_CS,SF_hits_per_CS = arch_hits_dealt/arch_CS,SF_hits_dealt/SF_CS
